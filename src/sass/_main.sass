@@ -10,6 +10,7 @@
 	padding-left: 10px
 	@include mq($until: 992px)
 		text-align: center
+		font-size: 16px
 	span
 		color: #007bd8
 		font-family: 'Montserrat'
@@ -133,6 +134,7 @@
 
 .brands
 	margin-bottom: 24px
+	position: relative
 	&-items
 		display: flex
 		justify-content: space-between
@@ -141,12 +143,7 @@
 			flex-direction: column
 		.brand-group
 			display: flex
-	.dealers-items
-		display: flex
-		flex-wrap: wrap
-		@include mq($until: 992px)
-			flex-direction: column
-
+			justify-content: center
 	.brand-item
 		display: flex
 		flex-direction: column
@@ -154,7 +151,14 @@
 		align-items: center
 		width: 193px
 		height: 118px
+.view-all
+	position: absolute
+	right: 10px
 
+.dealers-items
+	display: flex
+	@include mq($until: 992px)
+		flex-direction: column
 .dealer
 	&-sert
 		margin-bottom: 14px

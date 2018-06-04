@@ -299,7 +299,7 @@
 
 .search-mobile form {
   position: relative;
-  width: 100vw !important;
+  width: 95vw !important;
   margin: 0 auto;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.21);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.21);
@@ -663,7 +663,8 @@ nav li a-small {
   padding-left: 10px; }
   @media (max-width: 62em) {
     .section-title {
-      text-align: center; } }
+      text-align: center;
+      font-size: 16px; } }
   .section-title span {
     color: #007bd8;
     font-family: 'Montserrat';
@@ -810,7 +811,8 @@ nav li a-small {
         letter-spacing: 0.36px; }
 
 .brands {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  position: relative; }
   .brands-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -828,19 +830,10 @@ nav li a-small {
     .brands-items .brand-group {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
-  .brands .dealers-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    @media (max-width: 62em) {
-      .brands .dealers-items {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column; } }
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
   .brands .brand-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -856,6 +849,21 @@ nav li a-small {
     align-items: center;
     width: 193px;
     height: 118px; }
+
+.view-all {
+  position: absolute;
+  right: 10px; }
+
+.dealers-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 62em) {
+    .dealers-items {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .dealer-sert {
   margin-bottom: 14px; }
