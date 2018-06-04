@@ -1,0 +1,146 @@
+.header
+	padding-top: 26px
+	background: url(../img/header-bg.jpg) center no-repeat
+	max-height: 347px
+	// margin-bottom: 17px
+	&-logo
+		text-align: right
+		img
+			max-width: 100%
+	&-info
+		&__top
+			padding-top: 16px
+			margin-bottom: 30px
+			display: flex
+			&-text
+				color: #3a5866
+				font-family: 'Montserrat'
+				font-size: 16px
+				font-weight: 400
+				line-height: 36.5px
+				letter-spacing: 0.33px
+				margin-right: 15px
+				span
+					color: #ff6600
+					font-weight: 700
+			&-search
+				form
+					position: relative
+					width: 395px
+					margin: 0 auto
+					input, button
+						border: none
+						outline: none
+						border-radius: 5px
+					input
+						width: 100%
+						height: 63px
+						padding-left: 29px
+						font-family: 'Montserrat'
+						font-size: 16px
+						font-weight: 400
+						line-height: 70px
+						// Text style for "Поиск"
+						// letter-spacing: 0.32px
+					button
+						height: 63px
+						width: 63px
+						position: absolute
+						background: url(../img/icons/icon-search.png) center no-repeat
+						top: 0
+						right: 0
+						cursor: pointer
+						// &:before
+						// 	content: url(../img/icons/icon-search.png)
+						// 	width: 10px
+						// 	height: 10px
+
+
+		&__bottom
+			&-one
+				margin-bottom: 17px
+			&-block
+				color: #3a5966
+				font-family: 'Montserrat'
+				font-size: 18px
+				font-weight: 400
+				line-height: 30px
+				letter-spacing: 0.36px
+	&-contacts
+		width: 300px
+		// display: flex
+		// flex-direction: column
+		padding-top: 16px
+		// padding-right: 0
+		&__phone
+			color: #3a5866
+			font-family: 'Montserrat'
+			font-size: 27px
+			font-weight: 700
+			font-style: normal
+			// line-height: 35px
+			letter-spacing: 0.56px
+			&s
+				&-wrap
+					display: flex
+					justify-content: flex-end
+					.icon-phone
+						width: 23px
+						height: 23px
+						margin-right: 8px
+					margin-bottom: 10px					
+		&__small
+			text-align: right
+			color: #3a5866
+			font-family: 'Montserrat'
+			font-size: 15px
+			font-weight: 400
+			line-height: 30px
+			// Text style for "м, ногокан"
+			letter-spacing: 0.3px
+			margin-bottom: 20px
+		&__basket
+			position: relative
+			text-align: right
+			padding-right: 23px
+			background: #3a5966 url(../img/icons/icons-basket.png) 22px 13px no-repeat
+			width: 260px
+			max-height: 69px
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.25)
+			border-radius: 5px
+			background-color: #ffffff
+			color: #3a5966
+			font-family: 'Montserrat'
+			font-size: 25px
+			font-weight: 700
+			line-height: 30px
+			letter-spacing: 0.5px
+			float: right
+			&:after
+				position: absolute
+				top: 9px
+				left: 52px
+				content: "2"
+				text-align: center
+				// line-height: 26px
+				font-family: 'Montserrat'
+				font-size: 14px
+				font-weight: 700
+				color: #fff 
+				background-color: #ff0000
+				width: 26px
+				height: 26px
+				border-radius: 50%
+				z-index: 5
+			a
+				display: flex
+				justify-content: flex-end
+				color: #007bd8
+				font-family: 'Montserrat'
+				font-size: 14px
+				font-weight: 400
+				// line-height: 70px
+				text-decoration: underline
+				// border-bottom: 1px #007bd8 solid
+				// Text style for "Оформить з"
+				letter-spacing: 0.28px

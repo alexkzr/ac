@@ -1,0 +1,247 @@
+// .menu
+// 	&-link
+// 		z-index: 9
+// 		display: none
+// 		width: 50px
+// 		height: 50px
+// 		background-color: #fff
+// 		border-radius: 50%
+// 		box-shadow: 1px 1px 10px	rgba(0, 0, 0, 0.4)
+// 		top: 20px
+// 		left: 20px
+// 		position: fixed
+// 		span, span:before, span:after
+// 			display: block
+// 			position: absolute
+// 			height: 2px
+// 			width: 18px
+// 			background-color: #343434
+// 			left: 50%
+// 			margin-left: -9px
+// 			top: 50%
+// 			margin-top: -1px
+// 		span:before
+// 			transition: all 0.2s
+// 			content: ''
+// 			margin-top: -6px
+// 		span:after
+// 			transition: all 0.2s
+// 			content: ''
+// 			margin-top: 4px
+
+// 		&_active span
+// 			background-color: transparent
+// 			&:before
+// 				transform: rotate(135deg)
+// 				margin-top: 0
+// 			&:after
+// 				transform: rotate(-135deg)
+// 				margin-top: 0
+
+// 	background-color: #00a8ed
+// 	position: fixed
+// 	width: 100vw
+// 	z-index: 1
+// 	height: 100vh
+// 	display: flex
+// 	justify-content: center
+// 	align-items: center
+// 	transition: all 0.5s
+// 	left: -100vw
+// 	&_active
+// 		left: 0
+// 	ul
+// 		list-style: none
+// 		padding: 0
+// 		text-align: center
+// 		li
+// 			width: 100vw
+// 	a
+// 		display: block
+// 		line-height: 4
+// 		font-weight: 400
+// 		text-transform: uppercase
+// 		letter-spacing: 3px
+// 		color: #fff
+// 		width: 100%
+// 		text-decoration: none
+// 		transition: all 0.2s
+// 		&:hover
+// 			background-color: rgba(255, 255, 255, 0.4)
+// 			text-decoration: none
+// 			cursor: pointer
+.nav-page
+	margin-top: 20px
+	background-color: #00a8ed
+	z-index: 102
+	width: 100%
+	height: 60px
+	border-radius: 5px
+	padding: 0
+	.container
+		padding-left: 0
+	.navbar-my
+		position: relative
+		padding-left: 0
+		display: flex
+		height: 60px
+		width: 100%
+		// align-items: center
+		flex-wrap: nowrap
+		list-style: none
+		@include mq($until: 992px)
+			// display: none
+		&__item
+			position: relative
+			height: 60px
+			min-width: 160px
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			font-family: 'Montserrat'
+			font-size: 14px
+			font-weight: 400
+			line-height: 25px
+			padding-left: 0
+			@include mq($until: 1200px)
+				font-size: 12px
+				min-width: 130px !important
+			@include mq($until: 992px)
+				min-width: 90px !important
+				flex-direction: column
+				justify-content: space-around
+				a
+					padding-top: 5px !important
+					padding-bottom: 5px !important
+					text-align: center
+					// margin-left: 20px
+			&-main
+				display: flex
+				flex-direction: row
+				justify-content: flex-start
+				@include mq($until: 768px)
+					width: 100%
+				@include mq($from: 1200px)
+					width: 260px
+				@include mq($from: 1400px)
+					width: 260px
+				@include mq($until: 1400px)
+					max-width: 260px
+					padding-right: 20px
+			span
+				padding-left: 10px
+			.nav-link
+				padding-left: 55px
+				@include mq($until: 1200px)
+					padding-left: 43px
+			.pl-0
+				padding-left: 0 !important
+			span:not(.nav-link)
+				font-size: 20px
+				font-weight: 700
+	 	&:nth-child(1n)
+			@include mq($from: 768px)
+				border-right: 1px solid #fff
+	 	&:last-child
+	 		padding-left: 0
+	 		border-right: none
+			a
+				display: block
+				text-decoration: none
+				line-height: 12px
+				color: #fff
+				&:hover, &:focus
+					cursor: pointer
+					background-color: transparent
+			img
+				max-width: 20px
+				max-height: 18px
+				margin-left: 20px
+				@include mq($until: 1200px)
+					margin-left: 10px
+.menu-link__two
+	@include mq($until: 768px)
+		margin-left: 20px
+#navbar-main
+	padding-left: 0
+.menu-hidden
+	display: block !important
+	transition: all .3s ease-in
+.mobile-menu
+	position: relative
+	top: -105px
+	right: -92%
+	@include mq($from: 768px)
+		display: none
+.navbar-hidden
+	position: absolute
+	display: none
+.mobile-menu__switch
+.mobile-menu__hidden
+	display: flex
+	flex-direction: column
+	background-color: #00a8ed
+	width: 100vw
+	z-index: 555
+	padding-top: 20px
+	padding-left: 20px
+	li
+		display: flex
+		flex-direction: row
+		width: 200px
+		align-items: center
+		@include push--sides(auto)
+		a
+			color: #ffffff
+		img
+			height: 20px
+.submenu
+	&-big
+		position: absolute
+		top: 59px
+		left: -1px
+		color: #ffffff
+		font-family: 'Montserrat'
+		font-size: 14px
+		font-weight: 400
+		line-height: 40px
+		background-color: #66cbf4
+		list-style: none
+		width: 260px
+		padding-left: 0
+		z-index: 5
+		@include mq($until: 768px)
+			left: 15px
+		@include mq($until: 992px)
+			display: none
+	&-big li
+		padding-left: 20px
+	&-big li:hover
+		color: #3a5966
+		background: #c2eafb url('../img/icons/icon-shevron-menu.png') no-repeat 
+		background-position: 245px
+		cursor: pointer
+	&-small
+		padding-top: 15px
+		position: absolute
+		border-radius: 0
+		top: 100%
+		left: 0
+		width: 100%
+		z-index: 10
+		list-style: none
+		display: none
+		background: #00a8ed
+		opacity: 0.7
+		li
+			min-height: 30px
+	 	a
+	 		line-height: 100%
+				&:hover
+					color: #3a5966
+					letter-spacing: 0.28px
+					text-decoration: underline
+nav li a
+	@include mq($from: 992px, $until: 1200px)
+		padding-left: 5px !important

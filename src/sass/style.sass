@@ -1,0 +1,33 @@
+@import 'mq'
+@import 'mixin'
+@import 'variables'
+@import 'interface'
+@import 'header'
+@import 'menu'
+@import 'slider'
+@import 'main'
+@import 'footer'
+@import 'media'
+.info, .footer
+	display: none
+*
+	box-sizing: border-box
+.hidden-mobile
+	@include mq($until: 768px)
+		display: none !important
+img
+	max-width: 100%
+
+// input, button
+// 	&:focus
+// 		outline: none
+
+body
+	margin: 0
+
+// .col-lg-2, .col-lg-6
+// 	padding-right: 0
+// 	padding-left: 0
+
+// .col-lg-2
+// 	width: 400px 

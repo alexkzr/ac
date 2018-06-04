@@ -1,0 +1,270 @@
+.header
+	padding-top: 26px
+	background: url(../img/header-bg.jpg) center no-repeat
+	max-height: 347px
+	@include mq($until: 768px)
+		height: 60px
+		padding-top: 0
+	// margin-bottom: 17px
+	.header-wrap
+		@include mq($until: 768px)
+			height: 60px
+		@include mq($until: 1200px)
+			display: flex
+			justify-content: space-between
+	.header-mobile
+		display: none
+	&-logo
+		text-align: right
+		background: url(../img/logo.png) no-repeat center
+		background-size: contain
+		height: 188px
+		@include mq($until: 768px)
+			width: 60px 
+			height: 60px
+		@include mq($from: 768px, $until: 1200px)
+			width: 160px
+		@include mq($from: 1200px)
+			width: 238px
+	&-info
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		&__top
+			padding-top: 16px
+			margin-bottom: 30px
+			display: flex
+			@include mq($until: 1200px)
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				text-align: center
+				width: 300px
+				@include push--sides(auto)
+				@include push--ends(auto)
+				text-align: left
+			&-text
+				color: #3a5866
+				font-family: 'Montserrat'
+				font-size: 16px
+				font-weight: 400
+				line-height: 36.5px
+				letter-spacing: 0.33px
+				margin-right: 15px
+				span
+					color: #ff6600
+					font-weight: 700
+			&-search
+				@include mq($until: 768px)
+					display: none
+				form
+					position: relative
+					width: 395px
+					margin: 0 auto
+					@include mq($until: 1200px)
+						width: 300px
+					input, button
+						border: none
+						outline: none
+						border-radius: 5px
+					input
+						width: 100%
+						height: 63px
+						padding-left: 29px
+						font-family: 'Montserrat'
+						font-size: 16px
+						font-weight: 400
+						line-height: 70px
+						// Text style for "Поиск"
+						// letter-spacing: 0.32px
+					button
+						height: 63px
+						width: 63px
+						position: absolute
+						background: url(../img/icons/icon-search.png) center no-repeat
+						top: 0
+						right: 0
+						cursor: pointer
+						// &:before
+						// 	content: url(../img/icons/icon-search.png)
+						// 	width: 10px
+						// 	height: 10px
+
+
+		&__bottom
+			@include mq($until: 1200px)
+				display: none
+			&-one
+				margin-bottom: 17px
+			&-block
+				color: #3a5966
+				font-family: 'Montserrat'
+				font-size: 18px
+				font-weight: 400
+				line-height: 30px
+				letter-spacing: 0.36px
+	&-contacts
+		position: relative
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@include mq($until: 768px)
+			padding-top: 0
+		@include mq($from: 768px)
+			display: block
+			width: 300px
+
+		// display: flex
+		// flex-direction: column
+		padding-top: 16px
+		// padding-right: 0
+		&__phone
+			color: #3a5866
+			font-family: 'Montserrat'
+			font-size: 27px
+			font-weight: 700
+			font-style: normal
+			// line-height: 35px
+			letter-spacing: 0.56px
+			@include mq($from: 992px, $until: 1200px)
+				font-size: 18px
+			@include mq($until: 992px)
+				font-size: 14px
+			&s
+				&-wrap
+					display: flex
+					justify-content: flex-end
+					@include mq($until: 768px)
+						position: absolute
+						right: 20%
+					.icon-phone
+						width: 23px
+						height: 23px
+						margin-right: 8px
+						margin-bottom: 10px
+						@include mq($until: 460px)
+							margin-top: 5px
+							width: 15px
+							height: 15px					
+		&__small
+			text-align: right
+			color: #3a5866
+			font-family: 'Montserrat'
+			font-size: 15px
+			font-weight: 400
+			line-height: 30px
+			// Text style for "м, ногокан"
+			letter-spacing: 0.3px
+			margin-bottom: 20px
+			@include mq($until: 992px)
+				font-size: 10px
+		&__basket
+			position: relative
+			text-align: right
+			padding-right: 23px
+			background: url(../img/icons/icons-basket.png) 22px 13px no-repeat
+			width: 260px
+			height: 69px
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.25)
+			border-radius: 5px
+			background-color: #ffffff
+			color: #3a5966
+			font-family: 'Montserrat'
+			font-size: 25px
+			font-weight: 700
+			line-height: 30px
+			letter-spacing: 0.5px
+			float: right
+			@include mq($until: 360px)
+				left: -20%
+				box-shadow: none
+				background-color: transparent
+				border: none
+				width: 60px !important
+			@include mq($from: 360px, $until: 460px)
+				left: -10%
+				box-shadow: none
+				background-color: transparent
+				border: none
+				width: 60px !important
+			@include mq($from: 460px, $until: 768px)
+				position: absolute
+				left: 0%
+				box-shadow: none
+				background-color: transparent
+				border: none
+				width: 60px !important
+			@include mq($until: 992px)
+				background-position: 5px
+			@include mq($until: 1200px)
+				font-size: 18px
+				width: 220px
+			&:after
+				position: absolute
+				top: 9px
+				left: 52px
+				content: "2"
+				text-align: center
+				// line-height: 26px
+				font-family: 'Montserrat'
+				font-size: 14px
+				font-weight: 700
+				color: #fff 
+				background-color: #ff0000
+				width: 26px
+				height: 26px
+				border-radius: 50%
+				z-index: 5
+				@include mq($until: 992px)
+					left: 30px
+			a
+				display: flex
+				justify-content: flex-end
+				color: #007bd8
+				font-family: 'Montserrat'
+				font-size: 14px
+				font-weight: 400
+				// line-height: 70px
+				text-decoration: underline
+				// border-bottom: 1px #007bd8 solid
+				// Text style for "Оформить з"
+				letter-spacing: 0.28px
+				@include mq($until: 1200px)
+					font-size: 12px
+.search-mobile
+	@include mq($from: 768px)
+		display: none
+	form
+		position: relative
+		width: 100vw !important
+		margin: 0 auto
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.21)
+		border-radius: 5px
+		input, button
+			border: none
+			outline: none
+			border-radius: 5px
+		input
+			width: 100%
+			height: 63px
+			padding-left: 29px
+			font-family: 'Montserrat'
+			font-size: 16px
+			font-weight: 400
+			line-height: 70px
+			// Text style for "Поиск"
+			// letter-spacing: 0.32px
+		button
+			height: 63px
+			width: 63px
+			position: absolute
+			background: url(../img/icons/icon-search.png) center no-repeat
+			top: 0
+			right: 0
+			cursor: pointer
+			// &:before
+			// 	content: url(../img/icons/icon-search.png)
+			// 	width: 10px
+			// 	height: 10px

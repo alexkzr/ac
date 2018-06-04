@@ -1,0 +1,83 @@
+.slider-main
+  max-width: 955px
+  height: 235px
+  margin-left: 280px
+  @include mq($until: 992px)
+    margin-left: 0
+  @include mq($until: 768px)
+    height: 75px
+    display: none !important
+  .slide
+    height: 235px
+    margin-top: 20px
+    @include mq($until: 768px)
+      height: 75px
+      width: 100%
+  .slide1
+    background: url(../img/banner1.png) no-repeat center
+    background-size: cover
+  .slide2
+    background: url(../img/banner2.png) no-repeat center
+    background-size: cover
+  .slide3
+    background: url(../img/banner3.png) no-repeat center
+    background-size: cover
+  .slide4
+    background: url(../img/banner4.png) no-repeat center
+    background-size: cover
+  .slide5
+    background: url(../img/banner5.png) no-repeat center
+    background-size: cover
+  .slick-prev, .slick-next
+    display: none !important
+.slick-dots
+  bottom: 0 !important
+  @include mq($until: 460px)
+    top: 130%
+  @include mq($from: 460, $until: 768px)
+    top: 130%
+.slick-dots .slick-active
+  background-color: #00a8ed !important
+.slick-dots li
+  border: 2px solid #00a8ed
+  background-color: transparent
+  border-radius: 50px
+  @include mq($from: 576px)
+    width: 18px 
+    height: 18px 
+  @include mq($until: 576px)
+    width: 11px !important
+    height: 10px !important
+.slick-dots li button
+  display: none !important
+
+.slider-nav
+  height: 121px
+  max-width: 950px
+  margin-left: 280px
+  @include mq($until: 992px)
+    margin-left: 0
+  @include mq($until: 460px)
+    height: 75px
+  .slide-nav
+    @include mq($until: 460px)
+      height: 120px
+    @include mq($from: 460px, $until: 768px)
+      height: 200px
+    height: 120px
+    width: 310px
+  .slide-nav1
+    background: url(../img/banner1-sm.png) no-repeat center
+    background-size: contain
+  .slide-nav2
+    background: url(../img/banner2-sm.png) no-repeat center
+    background-size: contain
+  .slide-nav3
+    background: url(../img/banner3-sm.png) no-repeat center
+    background-size: contain
+  .slide-nav4
+    background: url(../img/banner4-sm.png) no-repeat center
+    background-size: contain
+  .slide-nav5
+    background: url(../img/banner5-sm.png) no-repeat center
+    background-size: contain
